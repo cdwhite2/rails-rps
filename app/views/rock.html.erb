@@ -1,0 +1,34 @@
+<!--/views/rock.erb-->
+
+<!--
+1 = Rock
+2 = Paper
+3 = Scissors
+-->
+
+<%
+  choice = rand(1..3)
+
+  if choice == 1
+    opponent_plays = "rock"
+    outcome = "tied"
+  elsif choice == 2
+    opponent_plays = "paper"
+    outcome = "lost"
+  elsif choice == 3
+    opponent_plays = "scissors"
+    outcome = "won"
+  end
+%>
+
+<h2>We played rock!</h2>
+
+<h2>They played <%= "#{opponent_plays}" %>!</h2>
+
+<h2>We <%= "#{outcome}" %>!</h2>
+
+<div>
+  <p>
+    <a href="/">Rules</a>
+  </p>
+<div>
